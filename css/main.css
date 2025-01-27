@@ -549,8 +549,8 @@ section,
   margin: 0; /* Ensures no margin from parent containers */
   padding: 0; /* Removes unwanted padding */
   display: flex;
-  align-items: center; /* Vertically align the content */
-  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  justify-content: center;
   background: transparent; /* Ensures no background color causes lines */
 }
 
@@ -571,8 +571,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
-  text-align: left; /* Align text to the left */
-  padding-left: 50px; /* Add padding to move content away from the edge */
+  text-align: center;
 }
 
 .hero h2 {
@@ -610,7 +609,6 @@ section,
   color: var(--accent-color);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
@@ -618,10 +616,6 @@ section,
 
   .hero p {
     font-size: 20px;
-  }
-
-  .hero .container {
-    padding-left: 20px; /* Reduce padding for smaller screens */
   }
 }
 
