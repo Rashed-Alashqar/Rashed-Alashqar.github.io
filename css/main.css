@@ -549,8 +549,8 @@ section,
   margin: 0; /* Ensures no margin from parent containers */
   padding: 0; /* Removes unwanted padding */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   background: transparent; /* Ensures no background color causes lines */
 }
 
@@ -599,7 +599,7 @@ section,
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.7); /* Adjust for better visibility */
+  color: rgba(156, 153, 153, 0.7); /* Adjust for better visibility */
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
