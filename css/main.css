@@ -551,7 +551,7 @@ section,
   width: 100%;
   height: auto;
   display: block;
-  filter: brightness(30%); /* Slightly reduce brightness */
+  filter: brightness(10%); /* Slightly reduce brightness */
 }
 
 .hero::after {
