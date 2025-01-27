@@ -548,12 +548,11 @@ section,
   width: 100%;
   height: 100vh; /* Full viewport height */
   position: relative;
-  margin: 0; /* Ensures no margin from parent containers */
-  padding: 0; /* Removes unwanted padding */
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent; /* Ensures no background color causes lines */
+  align-items: flex-start; /* Align content to the top */
+  justify-content: flex-start; /* Align content to the left */
 }
 
 .hero img {
@@ -567,25 +566,28 @@ section,
 }
 
 .hero:before {
-  content: none; /* Fully disable the overlay if it's not needed */
+  content: none; /* Disable overlay for simplicity */
 }
 
 .hero .container {
   position: relative;
   z-index: 3;
-  text-align: center;
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Add some padding to move content away from edges */
+  top: 0; /* Move content to the top */
+  left: 0; /* Align content to the left */
 }
 
 .hero h2 {
   margin: 0;
-  font-size: 64px;
+  font-size: 48px; /* Adjust font size */
   font-weight: 700;
   color: #ffffff; /* Ensure readability */
 }
 
 .hero p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: 22px; /* Adjust font size */
   color: #ffffff; /* Ensure readability */
 }
 
@@ -595,15 +597,15 @@ section,
 }
 
 .hero .social-links {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .hero .social-links a {
-  font-size: 24px;
+  font-size: 18px;
   display: inline-block;
   color: rgba(255, 255, 255, 0.7); /* Adjust for better visibility */
   line-height: 1;
-  margin-right: 20px;
+  margin-right: 15px;
   transition: 0.3s;
 }
 
@@ -613,11 +615,11 @@ section,
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .hero p {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
