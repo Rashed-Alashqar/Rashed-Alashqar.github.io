@@ -542,21 +542,11 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-/* Global Reset */
-body, html {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Hero Section */
 .hero {
   width: 100%;
-  height: 100vh; /* Ensures full viewport height */
+  min-height: 100vh;
   position: relative;
-  margin: 0; /* Removed any chance of margin */
-  padding: 0; /* Removed padding causing white line */
+  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -574,7 +564,7 @@ body, html {
 
 .hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.3); /* Light overlay for better text visibility */
+  background: color-mix(in srgb, var(--background-color), transparent 70%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -589,13 +579,11 @@ body, html {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
-  color: #ffffff; /* Ensure text is visible over the image */
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
-  color: #ffffff; /* Ensure text is visible */
 }
 
 .hero p span {
@@ -610,7 +598,7 @@ body, html {
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.7); /* Adjusted for better visibility */
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
@@ -629,7 +617,6 @@ body, html {
     font-size: 20px;
   }
 }
-
 
 /*--------------------------------------------------------------
 # About Section
