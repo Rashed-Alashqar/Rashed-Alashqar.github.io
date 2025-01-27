@@ -599,7 +599,7 @@ section,
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: rgba(255, 255, 255, 0.7); /* Adjust for better visibility */
+  color: rgba(155, 155, 155, 0.7); /* Adjust for better visibility */
   line-height: 1;
   margin-right: 2px;
   transition: 0.3s;
