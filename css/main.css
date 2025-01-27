@@ -542,37 +542,37 @@ section,
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-<style>
-  .hero {
-    position: relative;
-    overflow: hidden;
-  }
+.hero {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  margin: 0; /* Ensures no margin from parent containers */
+  padding: 0; /* Removes unwanted padding */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent; /* Ensures no background color causes lines */
+}
 
-  .hero img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(50%); /* Reduces brightness */
-  }
+.hero img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
 
-  .hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    z-index: 1;
-  }
+.hero:before {
+  content: none; /* Fully disable the overlay if it's not needed */
+}
 
-  .hero .container {
-    position: relative;
-    z-index: 2; /* Ensures content appears above overlay */
-    color: white;
-  }
-
-
+.hero .container {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
 
 .hero h2 {
   margin: 0;
