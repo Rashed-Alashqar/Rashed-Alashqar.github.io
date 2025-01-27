@@ -601,7 +601,7 @@ section,
   display: inline-block;
   color: rgba(255, 255, 255, 0.7); /* Adjust for better visibility */
   line-height: 1;
-  margin-right: 20px;
+  margin-right: 2px;
   transition: 0.3s;
 }
 
