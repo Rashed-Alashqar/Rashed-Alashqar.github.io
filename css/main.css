@@ -546,12 +546,14 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* Full viewport height */
   position: relative;
-  padding: 80px 0;
+  margin: 0; /* Ensures no margin from parent containers */
+  padding: 0; /* Removes unwanted padding */
   display: flex;
   align-items: center;
   justify-content: center;
+  background: transparent; /* Ensures no background color causes lines */
 }
 
 .hero img {
@@ -565,27 +567,26 @@ section,
 }
 
 .hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
+  content: none; /* Fully disable the overlay if it's not needed */
 }
 
 .hero .container {
   position: relative;
   z-index: 3;
+  text-align: center;
 }
 
 .hero h2 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  color: #ffffff; /* Ensure readability */
 }
 
 .hero p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  color: #ffffff; /* Ensure readability */
 }
 
 .hero p span {
@@ -600,7 +601,7 @@ section,
 .hero .social-links a {
   font-size: 24px;
   display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: rgba(255, 255, 255, 0.7); /* Adjust for better visibility */
   line-height: 1;
   margin-right: 20px;
   transition: 0.3s;
