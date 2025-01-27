@@ -543,36 +543,33 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  height: 100vh; /* Full viewport height */
   position: relative;
-  margin: 0; /* Ensures no margin from parent containers */
-  padding: 0; /* Removes unwanted padding */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent; /* Ensures no background color causes lines */
+  overflow: hidden;
 }
 
 .hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  height: auto;
+  display: block;
+  filter: brightness(70%); /* Slightly reduce brightness */
 }
 
-.hero:before {
-  content: none; /* Fully disable the overlay if it's not needed */
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Add a subtle overlay */
+  z-index: 1;
 }
 
 .hero .container {
   position: relative;
-  z-index: 3;
-  text-align: center;
+  z-index: 2;
 }
+
 
 .hero h2 {
   margin: 0;
@@ -1271,6 +1268,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
