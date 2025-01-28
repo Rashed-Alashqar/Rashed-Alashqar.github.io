@@ -543,6 +543,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
+  filter: brightness(0.7)
   width: 100%;
   height: 100vh; /* Full viewport height */
   position: relative;
